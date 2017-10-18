@@ -1,9 +1,14 @@
 'use strict'
 
+
+
 function get(film) {
 
+const apiKey = require("./env");
+const apiId = require("./inv");
+
 const request = require('request');
-const url = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCBnq_jGi2RW6neA_sLlPn8RwdN4AKp-D4&cx=000886761285250742499:wtmhnmzut4a&q=' + film;
+const url = 'https://www.googleapis.com/customsearch/v1?key='+apiKey+'&cx='+apiId+'&q=' + film;
 
 
 	request(url,  function(error, response, body) {
